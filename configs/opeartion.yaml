@@ -1,0 +1,304 @@
+operations:
+  - op_name: "add"
+    op_type: "binary"
+    op_np_func: "add"
+    op_torch_func: "add"
+    op_sp_func: "Add"
+    op_symbol: "+"
+    constant_num:
+    repeat_times:
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: "high"
+
+  - op_name: "sub"
+    op_type: "binary"
+    op_np_func: "subtract"
+    op_torch_func: "subtract"
+    op_sp_func: "sp_subtract"
+    op_symbol: "-"
+    constant_num:  
+    repeat_times:  
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: high
+
+  - op_name: "mul"
+    op_type: "binary"
+    op_np_func: "multiply"
+    op_torch_func: "multiply"
+    op_sp_func: "Mul"
+    op_symbol: "·"
+    constant_num:  
+    repeat_times:  
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: high
+
+  - op_name: "div"
+    op_type: "binary"
+    op_np_func: "np_div"
+    op_torch_func: "torch_div"
+    op_sp_func: "sp_div"
+    op_symbol: "/"
+    constant_num:  
+    repeat_times:  
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: low
+    domain: "1:x>0"
+
+  - op_name: "sin"
+    op_type: "unary"
+    op_np_func: "sin"
+    op_torch_func: "sin"
+    op_sp_func: "sin"
+    op_symbol: "sin"
+    constant_num:  
+    repeat_times:  
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: medium
+    adjacent_repeatable: False
+
+  - op_name: "inv"
+    op_type: "unary"
+    op_np_func: "np_inv"
+    op_torch_func: "torch_inv"
+    op_sp_func: "sp_inv"
+    op_symbol: "inv"
+    constant_num: 1
+    repeat_times:
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: medium
+    adjacent_repeatable: False
+
+  - op_name: "tan"
+    op_type: "unary"
+    op_np_func: "tan"
+    op_torch_func: "tan"
+    op_sp_func: "tan"
+    op_symbol: "tan"
+    constant_num:  
+    repeat_times:  
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: medium
+    domain: "0:x!=pi/2+k*pi"
+    adjacent_repeatable: False
+
+
+
+  - op_name: "atan"
+    op_type: "unary"
+    op_np_func: "arctan"
+    op_torch_func: "arctan"
+    op_sp_func: "atan"
+    op_symbol: "atan"
+    constant_num:  
+    repeat_times: 1
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: low
+    adjacent_repeatable: False
+
+  - op_name: "tanh"
+    op_type: "unary"
+    op_np_func: "tanh"
+    op_torch_func: "tanh"
+    op_sp_func: "tanh"
+    op_symbol: "tanh"
+    constant_num:
+    repeat_times:
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: medium
+    adjacent_repeatable: False
+
+
+  - op_name: "const"
+    op_type: "unary"
+    op_np_func: "np_C"
+    op_torch_func: "torch_C"
+    op_sp_func: "sp_C"
+    op_symbol: "C"
+    constant_num: 1
+    repeat_times: Never
+    if_test: False
+    vectorized: True
+    is_function_operator: False
+
+  - op_name: "exp"
+    op_type: "unary"
+    op_np_func: "exp"
+    op_torch_func: "exp"
+    op_sp_func: "exp"
+    op_symbol: "exp"
+    constant_num:  
+    repeat_times:  
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: medium
+    adjacent_repeatable: False
+
+
+  - op_name: "log"
+    op_type: "unary"
+    op_np_func: "np_log"
+    op_torch_func: "torch_log"
+    op_sp_func: "sp_log"
+    op_symbol: "log"
+    constant_num:  
+    repeat_times:  
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: low
+    domain: "0:x>0"
+    adjacent_repeatable: False
+
+  - op_name: "linear"
+    op_type: "unary"
+    op_np_func: "np_linear"
+    op_torch_func: "torch_linear"
+    op_sp_func: "sp_linear"
+    op_symbol: "L"
+    constant_num: 2
+    repeat_times:  
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: high
+    adjacent_repeatable: False
+
+  - op_name: "pow"
+    op_type: "unary"
+    op_np_func: "np_pow"
+    op_torch_func: "torch_pow"
+    op_sp_func: "sp_pow"
+    op_symbol: "^"
+    constant_num: 1
+    repeat_times:  
+    is_test_sp: False
+    constant_range: (-2,2)
+    is_function_operator: False
+    generation_level: low
+
+  - op_name: "square"
+    op_type: "unary"
+    op_np_func: "square"
+    op_torch_func: "square"
+    op_sp_func: "sp_square"
+    op_symbol: "^2"
+    constant_num:
+    repeat_times:
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: high
+
+
+  - op_name: "sqrt"
+    op_type: "unary"
+    op_np_func: "np_sqrt"
+    op_torch_func: "torch_sqrt"
+    op_sp_func: "sp_sqrt"
+    op_symbol: "√"
+    constant_num:
+    repeat_times:  
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: medium
+
+  - op_name: "cbrt"
+    op_type: "unary"
+    op_np_func: "cbrt"
+    op_torch_func: "torch_cbrt"
+    op_sp_func: "sp_cbrt"
+    op_symbol: "3√"
+    constant_num:
+    repeat_times:
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: low
+
+  - op_name: "slice"
+    op_type: "unary"
+    op_np_func: "np_slice"
+    op_torch_func: "torch_slice"
+    op_sp_func: "sp_slice"
+    op_symbol: ":"
+    constant_num:
+    repeat_times: Never
+    if_test: False
+    vectorized: True
+    index_necessary: True
+    choisen_index:
+    is_function_operator: False
+
+  - op_name: "abs"
+    op_type: "unary"
+    op_np_func: "abs"
+    op_torch_func: "abs"
+    op_sp_func: "Abs"
+    op_symbol: "|·|"
+    constant_num:
+    repeat_times: 2
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: medium
+
+  - op_name: "relu"
+    op_type: "unary"
+    op_np_func: "np_relu"
+    op_torch_func: "torch_relu"
+    op_sp_func: "sp_relu"
+    op_symbol: "Relu"
+    constant_num:
+    repeat_times: 1
+    is_test_sp: True
+    is_function_operator: False
+    generation_level: low
+
+  - op_name: "diff"
+    op_type: "unary"
+    op_np_func: "np_diff"
+    op_torch_func: "torch_diff"
+    op_sp_func: "sp_diff"
+    op_symbol: "dx"
+    constant_num:
+    repeat_times: Never
+    is_test_sp: False
+    vectorized: True
+    index_necessary: True
+    choisen_index:
+    is_function_operator: True
+    generation_level: low
+    height_limit: 2
+
+  - op_name: "integrate"
+    op_type: "unary"
+    op_np_func: "np_integrate"
+    op_torch_func: "torch_integrate"
+    op_sp_func: "sp_integrate"
+    op_symbol: "∫"
+    constant_num:
+    repeat_times: Never
+    is_test_sp: False
+    vectorized: True
+    index_necessary: True
+    choisen_index:
+    is_function_operator: True
+    generation_level: low
+    height_limit: 2
+
+
+
+
+
+
+
+
+
+
+
+
+
