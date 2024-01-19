@@ -101,7 +101,7 @@ const_array,pred_funcimg,loss = botfip_trainer.model.const_update(hyperparameter
 This completes the framework for deducing possible ots and values through funcimg.
 
 ## Acknowledgement
-We thank the authors of the following repositories for their open-source code, which has been of great help to our research @jsmy-CTH @Peter-Bloomberg. At the same time, we would like to thank Mfeducation for their support and assistance. In addition, our code development mainly refer to the https://github.com/salesforce/LAVIS project, in this thank salesforce very much for their excellent work.
+We thank the authors of the following repositories for their open-source code, which has been of great help to our research @jsmy-CTH @Peter-Bloomberg. At the same time, we would like to thank MFEducation for their support and assistance. In addition, our code development mainly refer to the https://github.com/salesforce/LAVIS project, in this thank salesforce very much for their excellent work.
 
 
 ## Citation
