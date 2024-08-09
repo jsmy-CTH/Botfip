@@ -104,15 +104,4 @@ This completes the framework for deducing possible ots and values through funcim
 We thank the authors of the following repositories for their open-source code, which has been of great help to our research @jsmy-CTH @Peter-Bloomberg. At the same time, we would like to thank MFEducation for their support and assistance. In addition, our code development mainly refer to the https://github.com/salesforce/LAVIS project, in this thank salesforce very much for their excellent work.
 
 
-## Citation
-If you find this code useful in your research, please cite:
-```
-@misc{chen2024bootstrapping,
-      title={Bootstrapping OTS-Funcimg Pre-training Model (Botfip) -- A Comprehensive Symbolic Regression Framework}, 
-      author={Tianhao Chen and Pengbo Xu and Haibiao Zheng},
-      year={2024},
-      eprint={2401.09748},
-      archivePrefix={arXiv},
-      primaryClass={cs.SC}
-}
 ```
